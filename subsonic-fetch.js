@@ -1,3 +1,7 @@
+/* js-subsonic:subsonic-fetch - fetch and promises based library for accessing Subsonic servers */
+/* Copyright @2016 Joseph W Shelby */
+/* Released under the MIT License */
+
 var fetch = require('node-fetch');
 var Promise = require("bluebird");
 fetch.Promise = Promise;

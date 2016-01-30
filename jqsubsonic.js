@@ -1,3 +1,6 @@
+/* js-subsonic:jqsubsonic - JQuery based library for accessing Subsonic servers */
+/* Copyright @2014 Joseph W Shelby */
+/* Released under the MIT License */
 /*global console md5 */
 (function($) {
 
