@@ -31,7 +31,9 @@ It will check the status first, and reject (invoking ``catch`` function) if the 
 
 ### example with 'ping' test first
 ```javascript
-// null is the bitrate, defaulting to 0 which is 'unlimited'; true at the end means send a ping to the server to test getting a status
+// null is the bitrate, defaulting to 0 which is 'unlimited'; 
+// true at the end means send a ping to the server to test getting a status
+var sf = require('./subsonic-fetch');
 sf.open('http://jwshome.aboutjws.info:4040', "subfire", null, "seed", "token", true).then(function(res) {
    console.log("open", res);
    return sf.getPlaylists();
