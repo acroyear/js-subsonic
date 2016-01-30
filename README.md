@@ -52,3 +52,5 @@ sf.getPlaylists().then(function(res) {
 ```
 ## In Production
 JQSubSonic is currently the engine at the heart of [SubFire](http://subfireplayer.net/), and is considered stable. Subsonic-fetch is being developed for use in a node server to provide enhancements for a future SubFire release, and some of the methods have not been tested yet.
+## License
+Released under the MIT License
