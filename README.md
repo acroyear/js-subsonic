@@ -2,7 +2,7 @@
 Javascript libraries for accessing the Subsonic Media Server
 
 ## jqsubsonic
-This library is for jquery users, still based on jquery and callbacks(err,res).
+This library is for jquery users, still based on jquery and callbacks(err,res). Generally it will filter out the subsonic-response wrapper layer and each method will just return the core data asked for.
 
 ### example, requiring an open/ping first, and a little callback hell
 ```javascript
@@ -12,13 +12,14 @@ JQSubSonic.open(c.server, c.username, c.password, c.bitrate, function(err, res) 
     return;
   }
   // once opened, the instance can be used anywhere
-  JQSubSonic.getPlaylists(function(err, res) {
-    if (err) {
-      console.error("err", err);
+  JQSubSonic.getPlaylists(function(err2, res2) {
+    if (err2) {
+      console.error("err2", err2);
       return;
       }
     }
-    console.log(res);
+    // res2 => rawResponse.subsonic-response.playlists.playlist an array of playlists, pre-filtered
+    console.log(res2);
   });
 });
 ```
